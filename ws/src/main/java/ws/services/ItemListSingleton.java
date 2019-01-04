@@ -1,7 +1,10 @@
+package ws.services;
+
+import entities.item.Item;
+import ws.exception.ItemException;
+
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Singleton class to update item list without initiating
@@ -10,7 +13,7 @@ import java.util.Set;
  */
 public class ItemListSingleton
 {
-    private static final List<Item> items = new ArrayList<>();
+    private static List<Item> items = new ArrayList<>();
 
     /**
      * Constructor
@@ -29,11 +32,11 @@ public class ItemListSingleton
      */
     public static void addItem(final Item item) throws ItemException
     {
-      if(items.contains(item))
-      {
-          throw new ItemException("Item already exists");
-      }
-      items.add(item);
+        if(items.contains(item))
+        {
+          throw new ItemException("Items already exists");
+        }
+        items.add(item);
     }
 
     /**
@@ -45,7 +48,7 @@ public class ItemListSingleton
     {
         if(!items.contains(item))
         {
-            throw new ItemException("Item does not exist");
+            throw new ItemException("Items does not exist");
         }
         items.remove(item);
     }
@@ -59,7 +62,7 @@ public class ItemListSingleton
     {
         if(!items.contains(item))
         {
-            throw new ItemException("Item does not exist");
+            throw new ItemException("Items does not exist");
         }
        //todo update existing item
     }
@@ -70,6 +73,7 @@ public class ItemListSingleton
      */
     public static List<Item> getItems()
     {
+        items.add(new Item("01", "name 1", 2000));
         return items;
     }
 }

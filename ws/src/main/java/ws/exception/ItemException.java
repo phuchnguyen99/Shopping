@@ -1,3 +1,5 @@
+package ws.exception;
+
 /**
  * Exception class handle exception if the operation fails
  * @author Phuc Nguyen

@@ -9,6 +9,10 @@
       <module name="Shopping_mai" target="1.8" />
       <module name="Shopping_main" target="1.8" />
       <module name="Shopping_test" target="1.8" />
+      <module name="user_main" target="1.8" />
+      <module name="user_test" target="1.8" />
+      <module name="web_main" target="1.8" />
+      <module name="web_test" target="1.8" />
       <module name="ws_integTest" target="1.8" />
       <module name="ws_main" target="1.8" />
       <module name="ws_test" target="1.8" />

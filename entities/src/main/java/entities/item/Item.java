@@ -1,10 +1,14 @@
+package entities.item;
+
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 
 /**
- * Item class holds item variables
+ *  Item class holds item variables
  * @author Phuc Nguyen
  */
+@XmlRootElement
 public class Item
 {
     /**
@@ -18,7 +22,7 @@ public class Item
     /**
      * item price
      */
-    private Double itemPrice;
+    private double itemPrice;
 
     /**
      * Constructor
@@ -26,8 +30,9 @@ public class Item
      * @param itemName item name
      * @param itemPrice item price
      */
-    public Item(final String itemId, final String itemName, final Double itemPrice)
+    public Item(final String itemId, final String itemName, final double itemPrice)
     {
+        super();
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemPrice = itemPrice;
@@ -55,7 +60,7 @@ public class Item
      * set item price
      * @param itemPrice itemPrice
      */
-    public void setItemPrice(final Double itemPrice)
+    public void setItemPrice(final double itemPrice)
     {
         this.itemPrice = itemPrice;
     }
@@ -85,7 +90,7 @@ public class Item
      * @return itemPrice
      */
     @XmlElement
-    public Double getItemPrice()
+    public double getItemPrice()
     {
         return itemPrice;
     }
@@ -93,7 +98,11 @@ public class Item
     @Override
     public boolean equals(final Object o)
     {
-        if(o == null || getClass() != o.getClass())
+        if(o == null)
+        {
+            return false;
+        }
+        if(getClass() != o.getClass())
         {
             return false;
         }
@@ -105,6 +114,6 @@ public class Item
     @Override
     public int hashCode()
     {
-        return Objects.hash(itemId.hashCode(), itemName.hashCode());
+        return Objects.hash(getItemId().hashCode(), getItemName().hashCode());
     }
 }

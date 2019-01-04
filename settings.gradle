@@ -1,4 +1,6 @@
 rootProject.name = 'Shopping'
 include 'ws'
 include 'entities'
+include 'web'
+include 'user'
 
