@@ -10,6 +10,8 @@
         <element id="directory" name="classes">
           <element id="module-output" name="ws_main" />
           <element id="module-output" name="entities_main" />
+          <element id="module-output" name="user_main" />
+          <element id="module-output" name="web_main" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Shopping/web/Web" />

@@ -1,4 +1,4 @@
-package ws.services;
+package ws.utils;
 
 import entities.item.Item;
 import ws.exception.ItemException;
@@ -11,7 +11,7 @@ import java.util.List;
  * new objects after each restful services call
  * @author Phuc Nguyen
  */
-public class ItemListSingleton
+public class ItemUtils
 {
     private static List<Item> items = new ArrayList<>();
 
@@ -19,7 +19,7 @@ public class ItemListSingleton
      * Constructor
      *
      */
-    private ItemListSingleton()
+    private ItemUtils()
     {
         //private constructor to prevent the class
         //being initiated

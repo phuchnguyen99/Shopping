@@ -1,14 +1,11 @@
 package entities.item;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 
 /**
  *  Item class holds item variables
  * @author Phuc Nguyen
  */
-@XmlRootElement
 public class Item
 {
     /**
@@ -69,7 +66,6 @@ public class Item
      * get item id
      * @return itemId
      */
-    @XmlElement
     public String getItemId()
     {
         return itemId;
@@ -79,7 +75,6 @@ public class Item
      * get item name
      * @return itemName
      */
-    @XmlElement
     public String getItemName()
     {
         return itemName;
@@ -89,7 +84,6 @@ public class Item
      * get item price
      * @return itemPrice
      */
-    @XmlElement
     public double getItemPrice()
     {
         return itemPrice;

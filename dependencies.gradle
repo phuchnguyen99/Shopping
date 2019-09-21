@@ -1,3 +1,6 @@
 ext.libraries = [
-        wsLib : 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+        ws : 'javax.ws.rs:javax.ws.rs-api:2.0.1',
+        jersey : 'org.glassfish.jersey.core:jersey-server:2.27',
+        jerseyContainer : 'org.glassfish.jersey.containers:jersey-container-servlet:2.7',
+        jerseyContainerCore : 'org.glassfish.jersey.containers:jersey-container-servlet-core:2.7'
 ]

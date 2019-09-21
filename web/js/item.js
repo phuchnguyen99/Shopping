@@ -6,7 +6,7 @@ item_app.controller('itemController', function ($scope, $http) {
           $scope.listItems = response.data;
           console.log("successfully call obtainAllItems " + response.data);
       }, function (reason) {
-          console.log("fail to call obtainAllItems " + reason.status);
+          console.log("fail to call obtainAllItems " + reason.data);
       })
    } ;
 });

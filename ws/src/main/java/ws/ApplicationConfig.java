@@ -1,10 +1,15 @@
 package ws;
 
+import ws.exception.ExceptionHandler;
+import ws.exception.UserException;
 import ws.services.ItemRestful;
+import ws.services.UserRestful;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -22,6 +27,14 @@ public class ApplicationConfig extends Application
         return resources;
     }
 
+    @Override
+    public Map<String, Object> getProperties()
+    {
+        final Map<String, Object> properties = new HashMap<>();
+        properties.put("jersey.config.server.provider.packages", "ws.exception");
+        return properties;
+    }
+
     /**
      * add service classes to resource
      * @param resources resources
@@ -29,6 +42,8 @@ public class ApplicationConfig extends Application
     private void addRestResourcesClasses(Set<Class<?>> resources)
     {
        resources.add(ItemRestful.class);
+       resources.add(UserRestful.class);
+       resources.add(ExceptionHandler.class);
     }
 
 }

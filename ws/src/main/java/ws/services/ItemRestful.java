@@ -1,6 +1,7 @@
 package ws.services;
 
 import entities.item.Item;
+import ws.utils.ItemUtils;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -21,7 +22,7 @@ public class ItemRestful
     @Produces(MediaType.APPLICATION_JSON)
     public List<Item> obtainAllItems()
     {
-        return ItemListSingleton.getItems();
+        return ItemUtils.getItems();
     }
 
 }

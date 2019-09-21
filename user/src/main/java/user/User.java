@@ -1,26 +1,26 @@
 package user;
 
-import javax.xml.bind.annotation.XmlElement;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * User class holds user variables
  * @author Phuc Nguyen
  */
-public class User
+public class User implements Serializable
 {
     /**
      * username
      */
-    private final String username;
+    private String username;
     /**
      * password
      */
-    private final String password;
+    private String password;
     /**
      * user type
      */
-    private final UserType userType;
+    private UserType userType;
 
     /**
      * Constructor
@@ -36,10 +36,16 @@ public class User
     }
 
     /**
+     * Default constructor
+     */
+    public User()
+    {
+
+    }
+    /**
      * get username
      * @return username
      */
-    @XmlElement
     public String getUsername()
     {
         return username;
@@ -49,7 +55,6 @@ public class User
      * get password
      * @return password
      */
-    @XmlElement
     public String getPassword()
     {
         return password;
@@ -59,7 +64,6 @@ public class User
      * get user type
      * @return userType
      */
-    @XmlElement
     public UserType getUserType()
     {
         return userType;
